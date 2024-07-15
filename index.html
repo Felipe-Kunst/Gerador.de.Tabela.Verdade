@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Tabela Verdade</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="main-container">
+    <div class="barra-lateral">
+        <h2>Exemplos de Entrada:</h2>
+        <ul>
+            <li><a href="#" onclick="preencherExpressao('A ∧ B ∨ ∼C')">A ∧ B ∨ ∼C</a></li>
+            <li><a href="#" onclick="preencherExpressao('A → B')">A → B</a></li>
+            <li><a href="#" onclick="preencherExpressao('A ↔ B')">A ↔ B</a></li>
+            <li><a href="#" onclick="preencherExpressao('A ∧ (B ∨ C)')">A ∧ (B ∨ C)</a></li>
+            <li><a href="#" onclick="preencherExpressao('∼A ∨ B')">∼A ∨ B</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Gerador de Tabela Verdade</h1>
+        <label for="expressao">Expressão Lógica:</label>
+        <input type="text" id="expressao" placeholder="insira a sua expressao aqui">
+        <button onclick="gerarTabelaVerdade()">Gerar Tabela</button>
+        <div id="tabelaVerdade"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+function preencherExpressao(expressao) {
+    document.getElementById('expressao').value = expressao;
+}
+</script>
+</body>
+</html>
